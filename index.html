@@ -2,10 +2,12 @@
   <head>
     <meta charset="utf-8" />
     <title>Oculi-Auctus</title>
-    <meta name="description" content="Hello, WebVR! • A-Frame" />
+    <meta name="description" content="" />
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.8.4/dist/aframe-extras.min.js"></script>
+    <script src="main.js"></script>
+    <style type="text/css" src="style.css"></style>
   </head>
   <body style="margin : 0px; overflow: hidden;">
     <a-scene antialias="true" embedded arjs='sourceType: webcam;'> 
@@ -16,7 +18,7 @@
          <img id="target" src="target.png">
        </a-assets>        
 
-      <a-marker type ="pattern" url = "ressources\patterns\pattern-markerplateau.patt">      
+      <a-marker type="pattern" url="ressources/patterns/pattern-markerplateau.patt">      
          <a-plane position="0 0 0" rotation="-90 0 0" scale="3 3 3" width="2" height="1.2" material="src:#field; transparent: true; opacity:1"></a-plane>
         <a-plane id="movingTarget" position="0 0.15 0" rotation="-90 0 0" scale="1 1 1" material="src:#target; transparent: true; opacity:1"
         animation="property: rotation; to: -90 360 0; dur: 1000; loop: true;"></a-plane>     
@@ -25,24 +27,10 @@
       <a-entity camera ></a-entity>      
     
     </a-scene>
+
+    <!-- <div id="control-container">
+      <button id="moveTarget" class='main'>Move</button>
+    </div> -->
+
   </body>
 </html>
-
-<script type="text/javascript">
-  
-  function moveTarget(){
-
-    rayon = 2;
-
-    newX = Math.random(rayon)-rayon/2;
-    newZ = Math.random(rayon)-rayon/2;
-
-    // document.getElementById('mon-plan').position = newX+" "+0+" "+newZ;
-    document.getElementById('movingTarget').setAttribute('position', {x: newX,  y: 0.15,  z: newZ});
-    
-  }
-
-  document.addEventListener("keypress", moveTarget);
-
-
-</script>

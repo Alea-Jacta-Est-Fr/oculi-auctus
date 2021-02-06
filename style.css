@@ -1,0 +1,7 @@
+#control-container{
+	position: absolute;
+	display: flex;
+	justify-content: flex-end;
+	bottom: 0;
+	right: 0;
+}
