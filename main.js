@@ -2,6 +2,12 @@
 document.addEventListener("keypress", moveTarget);
 
 
+/*
+Pourquoi pas une function qui permettrait de placer ne manière "aléatoire" les 
+targets du plateau ?
+
+*/
+
 
 function moveTarget(){
 
@@ -15,4 +21,5 @@ document.getElementById('movingTarget').setAttribute(
 );
 
 }
+
 
