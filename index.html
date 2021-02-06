@@ -16,7 +16,7 @@
          <img id="target" src="target.png">
        </a-assets>        
 
-      <a-marker preset="hiro" >      
+      <a-marker type ="pattern" url = "ressources\patterns\pattern-markerplateau.patt">      
          <a-plane position="0 0 0" rotation="-90 0 0" scale="3 3 3" width="2" height="1.2" material="src:#field; transparent: true; opacity:1"></a-plane>
         <a-plane id="movingTarget" position="0 0.15 0" rotation="-90 0 0" scale="1 1 1" material="src:#target; transparent: true; opacity:1"
         animation="property: rotation; to: -90 360 0; dur: 1000; loop: true;"></a-plane>     
