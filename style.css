@@ -4,4 +4,30 @@
 	justify-content: flex-end;
 	bottom: 0;
 	right: 0;
+	font-size: 1.5em;
+}
+
+button.main{
+	outline: none;
+    margin: 1em;
+    padding: 0.5em 2em;
+    background: hsl(299deg 100% 63%);
+    border-radius: 0.7em;
+    border: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    box-shadow: 2px 2px 5px #0000003d;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1000px) {
+
+	a-scene,
+	video{
+		transform: scaleX(-1);
+	}
+
 }
