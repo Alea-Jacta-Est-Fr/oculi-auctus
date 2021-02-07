@@ -10,7 +10,16 @@
    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <a-scene id="main-scene" antialias="true" embedded arjs='debugUIEnabled: false ;sourceType: webcam; patternRatio:0.7; sourceWidth:1280; sourceHeight:960;' vr-mode-ui="enabled: false"> 
+    <a-scene id="main-scene" antialias="true" embedded 
+      arjs='
+        debugUIEnabled: false ;
+        detectionMode: mono;
+        sourceType: webcam;
+        patternRatio:0.7;
+        sourceWidth:1280;
+        sourceHeight:960;
+      '
+      vr-mode-ui="enabled: false"> 
        
 
        <a-assets>
