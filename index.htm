@@ -10,7 +10,7 @@
    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <a-scene id="main-scene" antialias="true" embedded arjs='sourceType: webcam;' vr-mode-ui="enabled: false"> 
+    <a-scene id="main-scene" antialias="true" embedded arjs='debugUIEnabled: false ;sourceType: webcam; patternRatio:0.7; sourceWidth:1280; sourceHeight:960;' vr-mode-ui="enabled: false"> 
        
 
        <a-assets>
@@ -38,27 +38,27 @@
 
 
       <a-marker type="pattern" url="ressources/patterns/pattern-joker.patt">
-        <a-plane position="0 0.15 0" rotation="-90 0 0" scale="1 1 1" material="src:#target; transparent: true; opacity:1"></a-plane>
+        <a-plane position="0 0.15 0" rotation="-90 0 0" scale="2 2 2" material="src:#target; transparent: true; opacity:1"></a-plane>
       </a-marker>
 
       <a-marker type="pattern" url="ressources/patterns/pattern-0V2.patt">
-        <a-plane position="0 0.15 0" rotation="-90 0 0" scale="1 1 1" material="src:#target-yellow; transparent: true; opacity:1"></a-plane>
+        <a-plane position="0 0.15 0" rotation="-90 0 0" scale="2 2 2" material="src:#target-yellow; transparent: true; opacity:1"></a-plane>
       </a-marker>
 
       <a-marker type="pattern" url="ressources/patterns/pattern-12.patt">
-        <a-plane position="0 0.15 0" rotation="-90 0 0" scale="1 1 1" material="src:#target-green; transparent: true; opacity:1"></a-plane>
+        <a-plane position="0 0.15 0" rotation="-90 0 0" scale="2 2 2" material="src:#target-green; transparent: true; opacity:1"></a-plane>
       </a-marker>
 
       <a-marker type="pattern" url="ressources/patterns/pattern-52.patt">
-        <a-plane position="0 0.15 0" rotation="-90 0 0" scale="1 1 1" material="src:#target-red; transparent: true; opacity:1"></a-plane>
+        <a-plane position="0 0.15 0" rotation="-90 0 0" scale="2 2 2" material="src:#target-red; transparent: true; opacity:1"></a-plane>
       </a-marker>
 
       <a-marker type="pattern" url="ressources/patterns/pattern-102.patt">
-        <a-plane position="0 0.15 0" rotation="-90 0 0" scale="1 1 1" material="src:#target-blue; transparent: true; opacity:1"></a-plane>
+        <a-plane position="0 0.15 0" rotation="-90 0 0" scale="2 2 2" material="src:#target-blue; transparent: true; opacity:1"></a-plane>
       </a-marker>
 
-      <a-marker type="pattern" url="ressources/patterns/pattern-2v3.patt">
-        <a-plane position="0 0.15 0" rotation="-90 0 0" scale="1 1 1" material="src:#target-orange; transparent: true; opacity:1"></a-plane>
+      <a-marker type="pattern" url="ressources/patterns/pattern-2v2.patt">
+        <a-plane position="0 0.15 0" rotation="-90 0 0" scale="2 2 2" material="src:#target-orange; transparent: true; opacity:1"></a-plane>
       </a-marker>
 
       <a-entity camera ></a-entity>

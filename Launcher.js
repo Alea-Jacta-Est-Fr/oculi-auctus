@@ -8,7 +8,7 @@ http.createServer(function (req, res) {
 
 	var filePath = '.' + req.url;
 	if (filePath == './')
-      filePath = './index.html';
+      filePath = './index.htm';
       var extname = path.extname(filePath);
       var contentType = 'text/html';
       switch (extname) {
