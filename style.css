@@ -1,3 +1,8 @@
+body{
+	margin : 0px;
+	overflow: hidden;
+}
+
 #control-container{
 	position: absolute;
 	display: flex;
@@ -22,6 +27,13 @@ button.main{
     box-shadow: 2px 2px 5px #0000003d;
     cursor: pointer;
 }
+
+#red{
+	width: 20px;
+	height: 20px;
+	background: red;
+}
+
 
 @media screen and (min-width: 1000px) {
 

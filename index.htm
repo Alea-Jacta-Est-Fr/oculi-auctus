@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Oculi-Auctus</title>
+    <meta name="description" content="" />
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.8.4/dist/aframe-extras.min.js"></script>
+    <script src="main.js"></script>
+   <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a-scene id="main-scene" antialias="true" embedded arjs='sourceType: webcam;' vr-mode-ui="enabled: false"> 
+       
+
+       <a-assets>
+         <!-- <img id="field" src="field.png"> -->
+         <img id="target" src="ressources/Graphics/target.png">
+
+         <img id="targetPos" src="ressources/Graphics/targetPos.png">
+         <img id="target-red" src="ressources/Graphics/target-red.png">
+         <img id="target-blue" src="ressources/Graphics/target-blue.png">
+         <img id="target-green" src="ressources/Graphics/target-green.png">
+         <img id="target-orange" src="ressources/Graphics/target-orange.png">
+         <img id="target-yellow" src="ressources/Graphics/target-yellow.png">
+
+       </a-assets>        
+
+      <a-marker type="pattern" url="ressources/patterns/pattern-markerplateau.patt">      
+         <!-- <a-plane position="0 0 0" rotation="-90 0 0" scale="3 3 3" width="2" height="1.2" material="src:#field; transparent: true; opacity:1"></a-plane> -->
+        <a-plane id="movingTarget" position="0 0.15 0" rotation="-90 0 0" scale="1 1 1" material="src:#target; transparent: true; opacity:1"
+        animation="property: rotation; to: -90 360 0; dur: 1000; loop: true;"></a-plane>    
+
+
+        <a-plane id="targetReference" position="1 0.15 1" rotation="-90 0 0" scale="1 1 1" material="src:#targetPos; transparent: true; opacity:1"></a-plane>
+
+      </a-marker>
+
+
+      <a-marker type="pattern" url="ressources/patterns/pattern-joker.patt">
+        <a-plane position="0 0.15 0" rotation="-90 0 0" scale="1 1 1" material="src:#target; transparent: true; opacity:1"></a-plane>
+      </a-marker>
+
+      <a-marker type="pattern" url="ressources/patterns/pattern-0V2.patt">
+        <a-plane position="0 0.15 0" rotation="-90 0 0" scale="1 1 1" material="src:#target-yellow; transparent: true; opacity:1"></a-plane>
+      </a-marker>
+
+      <a-marker type="pattern" url="ressources/patterns/pattern-12.patt">
+        <a-plane position="0 0.15 0" rotation="-90 0 0" scale="1 1 1" material="src:#target-green; transparent: true; opacity:1"></a-plane>
+      </a-marker>
+
+      <a-marker type="pattern" url="ressources/patterns/pattern-52.patt">
+        <a-plane position="0 0.15 0" rotation="-90 0 0" scale="1 1 1" material="src:#target-red; transparent: true; opacity:1"></a-plane>
+      </a-marker>
+
+      <a-marker type="pattern" url="ressources/patterns/pattern-102.patt">
+        <a-plane position="0 0.15 0" rotation="-90 0 0" scale="1 1 1" material="src:#target-blue; transparent: true; opacity:1"></a-plane>
+      </a-marker>
+
+      <a-marker type="pattern" url="ressources/patterns/pattern-2v3.patt">
+        <a-plane position="0 0.15 0" rotation="-90 0 0" scale="1 1 1" material="src:#target-orange; transparent: true; opacity:1"></a-plane>
+      </a-marker>
+
+      <a-entity camera ></a-entity>
+    
+    </a-scene>
+
+    <div id="control-container">
+      <button id="moveTarget" class='main' onclick="moveTarget()">Move</button>
+    </div>
+
+  </body>
+</html>
